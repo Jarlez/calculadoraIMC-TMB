@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Calculadora IMC</title>
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <div class="nav-flex">
+            <div class="left logo">
+                <img src="assets/imgs/logohp1.png">
+            </div>
+            <!-- 
+            <div class="nav-list center">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">IMC</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">TMB</a></li>
+                </ul>
+            </div>
+-->
+        </div>
+
+        <main id="page-one">
+
+            <section id="img">
+                <img src="assets/imgs/medicine.svg">
+            </section>
+
+            <section id="calculator">
+
+                <form id="form">
+                    <h1 id="title">
+                        Calculadora - IMC
+                    </h1>
+
+                    <div class="input-box">
+                        <label for="weight">
+                            Informe o seu peso:
+                        </label>
+                        <div class="input-field">
+                            <i class="fa-solid fa-weight-hanging"></i>
+                            <input type="number" id="weight" name="weight" placeholder="Ex: 70" required>
+                            <span>
+                                Kg
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="height">
+                            Informe a sua altura:
+                        </label>
+                        <div class="input-field">
+                            <i class="fa-solid fa-ruler"></i>
+                            <input type="number" step="0.01" id="height" name="height" placeholder="Ex: 1.70" required>
+                            <span>
+                                m
+                            </span>
+                        </div>
+                    </div>
+
+                    <button id="calculate">
+                        Calcular
+                    </button>
+
+                </form>
+
+                <div id="infos" class="hidden">
+                    <div id="result">
+                        <div id="bmi">
+                            <span id="value"></span>
+                            <span>Seu IMC</span>
+                        </div>
+                        <div id="description">
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div id="more_info">
+                        <a href="https://mundoeducacao.uol.com.br/saude-bem-estar/imc.htm" target="_blank">
+                            Mais informações sobre o IMC
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+        <section id="imc-info">
+
+            <div id="imc-value">
+
+                <span> De acordo com seu resultado</span>
+                <div id="description-text">
+                    <span></span>
+                </div>
+            </div>
+
+            <div id="text-info">
+                <h1> Veja aqui algumas dicas para ganhar peso de forma saudável:<br> estratégias para um ganho nutritivo
+                    e equilibrado.</h1>
+                <div id="text-paragraph">
+
+                    <div id="text-block">
+                        <div id="number">1</div>
+                        <div id="text-tittle">
+                            <h2>Alimentação equilibrada</h2>
+                            <p>Consuma alimentos saudáveis e equilibrados, como proteínas magras, carboidratos
+                                complexos, gorduras saudáveis, frutas, legumes e grãos integrais. Aumente a ingestão
+                                calórica para ganhar peso.</p>
+                        </div>
+                    </div>
+
+                    <div id="text-block">
+                        <div id="number">2</div>
+                        <div id="text-tittle">
+                            <h2>Aumente a ingestão calórica:</h2>
+                            <p>Adicione calorias extras à sua dieta com alimentos nutritivos. Inclua fontes saudáveis de
+                                calorias, como nozes, sementes, abacate, azeite de oliva e laticínios integrais.</p>
+                        </div>
+                    </div>
+
+                    <div id="text-block">
+                        <div id="number">3</div>
+                        <div id="text-tittle">
+                            <h2>Consuma proteínas suficientes</h2>
+                            <p>Certifique-se de obter proteínas adequadas para apoiar o crescimento muscular. Inclua
+                                fontes de proteína magra, como carnes magras, aves, peixes, ovos, legumes, laticínios e
+                                leguminosas.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="text-block">
+                        <div id="number">4</div>
+                        <div id="text-tittle">
+                            <h2>Faça refeições frequentes e lanches</h2>
+                            <p>Distribua sua ingestão calórica ao longo do dia em várias refeições e lanches para
+                                garantir um suprimento constante de nutrientes.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="text-block">
+                        <div id="number">5</div>
+                        <div id="text-tittle">
+                            <h2>Exercício físico</h2>
+                            <p>Combine uma alimentação adequada com exercícios físicos para promover o ganho de massa
+                                muscular. Consulte um profissional de saúde ou um treinador físico para um programa
+                                adequado de exercícios.</p>
+                        </div>
+                    </div>
+                    <div id="text-block">
+                        <div id="number">6</div>
+                        <div id="text-tittle">
+                            <h2>Evite alimentos processados e açúcares adicionados</h2>
+                            <p>Opte por alimentos naturais e minimamente processados para garantir a ingestão de
+                                nutrientes e evitar ganhos excessivos de peso não saudáveis.</p>
+                        </div>
+                    </div>
+
+                    <div id="text-block">
+                        <div id="number">7</div>
+                        <div id="text-tittle">
+                            <h2>Consulte um profissional de saúde</h2>
+                            <p>Se você estiver preocupado com seu peso ou busca um programa personalizado, é sempre
+                                recomendável consultar um nutricionista ou profissional de saúde qualificado para obter
+                                orientações individualizadas.</p>
+                        </div>
+                    </div>
+                    <div id="text-block">
+                        <div id="number">8</div>
+                        <div id="text-tittle">
+                            <h2>Dica Plus+</h2>
+                            <p> Lembre-se de que ganhar peso é um processo gradual e individual. É importante buscar um
+                                equilíbrio entre o aumento de calorias e escolhas alimentares nutritivas para um ganho
+                                de peso saudável.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+
+        <div class="alinhar-card">
+
+            <div class="card-projeto">
+                <div class="imgprojeto">
+                    <img src="img/ContadordeNumeros.webp" alt="imagem projeto" loading=“lazy” />
+                </div>
+                <div class="textoimg">
+                    <h2>Contador de números</h2>
+                </div>
+                <div class="botao-projeto">
+                    
+                </div>
+            </div>
+
+            <div class="card-projeto">
+                <div class="imgprojeto">
+                    <img src="img/CalculadoraBasica.webp" alt="imagem projeto" loading=“lazy” />
+                </div>
+                <div class="textoimg">
+                    <h2>Calculadora básica</h2>
+                </div>
+                <div class="botao-projeto">
+                    
+                </div>
+            </div>
+
+            <div class="card-projeto">
+                <div class="imgprojeto">
+                    <img src="img/Horário.webp" alt="imagem projeto" loading=“lazy” />
+                </div>
+                <div class="textoimg">
+                    <h2>Hora do dia</h2>
+                </div>
+                <div class="botao-projeto">
+                    
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 
+  <section id="section-card">
+
+            <div class="card">
+                <img src="./assets/imgs/rice.jpg">
+                <div class="intro">
+                    <h1>arroz</h1>
+                    <p>O arroz é uma fonte de energia devido aos carboidratos presentes nele. É baixo em gordura e rico
+                        em vitaminas, minerais e fibras. Também é facilmente digerível e uma opção livre de glúten para
+                        pessoas com intolerância.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./assets/imgs/rice.jpg">
+                <div class="intro">
+                    <h1>arroz</h1>
+                    <p>O arroz é uma fonte de energia devido aos carboidratos presentes nele. É baixo em gordura e rico
+                        em vitaminas, minerais e fibras. Também é facilmente digerível e uma opção livre de glúten para
+                        pessoas com intolerância.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./assets/imgs/rice.jpg">
+                <div class="intro">
+                    <h1>arroz</h1>
+                    <p>O arroz é uma fonte de energia devido aos carboidratos presentes nele. É baixo em gordura e rico
+                        em vitaminas, minerais e fibras. Também é facilmente digerível e uma opção livre de glúten para
+                        pessoas com intolerância.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./assets/imgs/rice.jpg">
+                <div class="intro">
+                    <h1>arroz</h1>
+                    <p>O arroz é uma fonte de energia devido aos carboidratos presentes nele. É baixo em gordura e rico
+                        em vitaminas, minerais e fibras. Também é facilmente digerível e uma opção livre de glúten para
+                        pessoas com intolerância.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./assets/imgs/rice.jpg">
+                <div class="intro">
+                    <h1>arroz</h1>
+                    <p>O arroz é uma fonte de energia devido aos carboidratos presentes nele. É baixo em gordura e rico
+                        em vitaminas, minerais e fibras. Também é facilmente digerível e uma opção livre de glúten para
+                        pessoas com intolerância.</p>
+                </div>
+            </div>
+
+
+        </section>
+
+-->
+
+
+
+
+        <section id="container-block">
+            <div id="block">
+            </div>
+        </section>
+
+
+
+        <script src="assets/js/script.js"></script>
+</body>
+
+</html>
